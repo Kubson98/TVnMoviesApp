@@ -36,8 +36,11 @@ timeline.xctimeline
 playground.xcworkspace
 
 ##api key
+
+/TVnMoviesApp/ApiKey.swift
+ApiKey.swift
 TVnMoviesApp/ApiKey.swift
-.swiftlint.yml
+./TVnMoviesApp/ApiKey.swift
 
 # Swift Package Manager
 #
