@@ -34,7 +34,7 @@ DerivedData/
 ## Playgrounds
 timeline.xctimeline
 playground.xcworkspace
-TVnMoviesApp/ApiKey.swift
+ApiKey.swift
 .swiftlint.yml
 
 # Swift Package Manager
