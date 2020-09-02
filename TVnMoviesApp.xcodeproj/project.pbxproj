@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C21159A24ED351A00EC8708 /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C21159924ED351A00EC8708 /* Link.swift */; };
 		8C396EAA24E2AB28005185FA /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C396EA924E2AB28005185FA /* HomeTableViewController.swift */; };
 		8C396EAD24E2AB62005185FA /* AlbumCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C396EAB24E2AB62005185FA /* AlbumCollectionViewCell.swift */; };
 		8C396EAE24E2AB62005185FA /* AlbumCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C396EAC24E2AB62005185FA /* AlbumCollectionViewCell.xib */; };
@@ -32,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8C21159924ED351A00EC8708 /* Link.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Link.swift; sourceTree = "<group>"; };
 		8C396EA924E2AB28005185FA /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		8C396EAB24E2AB62005185FA /* AlbumCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCollectionViewCell.swift; sourceTree = "<group>"; };
 		8C396EAC24E2AB62005185FA /* AlbumCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlbumCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				8CA7507224DD6EE6005B6CB8 /* Assets.xcassets */,
 				8CA7507724DD6EE6005B6CB8 /* Info.plist */,
 				8CA8669224EA987D004FA8F6 /* ApiKey.swift */,
+				8C21159924ED351A00EC8708 /* Link.swift */,
 			);
 			path = TVnMoviesApp;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 				8C7E826E24DF234D00812C9A /* EpisodesListViewController.swift in Sources */,
 				8CD4727724E16D120092EF83 /* EpisodeDetailViewController.swift in Sources */,
 				8CA7506E24DD6EE4005B6CB8 /* SeasonViewController.swift in Sources */,
+				8C21159A24ED351A00EC8708 /* Link.swift in Sources */,
 				8CA7506A24DD6EE4005B6CB8 /* AppDelegate.swift in Sources */,
 				8C743F1424E34EC600D911D1 /* MoviesData.swift in Sources */,
 				8C396EB224E2AF8B005185FA /* AlbumTableViewCell.swift in Sources */,

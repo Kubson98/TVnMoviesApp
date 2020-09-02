@@ -13,7 +13,7 @@ class SeasonViewController: UIViewController, UICollectionViewDelegateFlowLayout
     @IBOutlet weak var collectionView: UICollectionView!
     
     var seasonsManager = Manager()
-    var suitsArray = [Seasons]()
+    var seasonsArray = [Seasons]()
     let layout = UICollectionViewFlowLayout()
     var season = Int()
     
@@ -32,21 +32,21 @@ class SeasonViewController: UIViewController, UICollectionViewDelegateFlowLayout
     }
     
     func giveSeasonsData(data: [SeasonData]) {
-        suitsArray = data[0].seasons
-        if suitsArray[0].name == "Specials"{
-            suitsArray.removeFirst()
+        seasonsArray = data[0].seasons
+        if seasonsArray[0].name == "Specials"{
+            seasonsArray.removeFirst()
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return suitsArray.count
+        return seasonsArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "seasonCell", for: indexPath) as! SeasonCollectionViewCell
         configureCard(view: cell)
-        var url = URL(string: "https://image.tmdb.org/t/p/w300\(suitsArray[indexPath.row].poster_path)")!
+        var url = URL(string: "https://image.tmdb.org/t/p/w300\(seasonsArray[indexPath.row].poster_path)")!
         if let data = try? Data(contentsOf: url) {
             cell.seasonImage.image = UIImage(data: data)
         }
@@ -73,7 +73,7 @@ class SeasonViewController: UIViewController, UICollectionViewDelegateFlowLayout
         seasonsManager.performRequestSeasons(idOfMovieOrTV: season)
         repeat{
             collectionView.reloadData()
-        } while suitsArray.count == 0
+        } while seasonsArray.count == 0
         
     }
     

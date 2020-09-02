@@ -10,7 +10,7 @@
         <!--Home Table View Controller-->
         <scene sceneID="4a8-IR-Qjl">
             <objects>
-                <tableViewController storyboardIdentifier="Home" id="MK3-Gt-5Wa" customClass="HomeTableViewController" customModule="SuitsAppBeta" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="Home" id="MK3-Gt-5Wa" customClass="HomeTableViewController" customModule="TVnMoviesApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="7uA-xu-PJe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -35,7 +35,7 @@
         <!--Season View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="seasonsVC" id="BYZ-38-t0r" customClass="SeasonViewController" customModule="SuitsAppBeta" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="seasonsVC" id="BYZ-38-t0r" customClass="SeasonViewController" customModule="TVnMoviesApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -69,7 +69,7 @@
         <!--Episodes List View Controller-->
         <scene sceneID="qSi-8n-E1b">
             <objects>
-                <viewController storyboardIdentifier="episodeVC" id="StO-Ys-Un8" customClass="EpisodesListViewController" customModule="SuitsAppBeta" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="episodeVC" id="StO-Ys-Un8" customClass="EpisodesListViewController" customModule="TVnMoviesApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="y21-LM-K8h">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -108,7 +108,7 @@
         <!--Episode Detail View Controller-->
         <scene sceneID="ATo-eF-XLc">
             <objects>
-                <viewController storyboardIdentifier="detailVC" modalTransitionStyle="flipHorizontal" id="vTD-fO-IPT" customClass="EpisodeDetailViewController" customModule="SuitsAppBeta" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="detailVC" modalTransitionStyle="flipHorizontal" id="vTD-fO-IPT" customClass="EpisodeDetailViewController" customModule="TVnMoviesApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vTn-GA-56M">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -220,6 +220,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="AnU-E0-mbg"/>
+        <segue reference="xQv-Ck-KCc"/>
     </inferredMetricsTieBreakers>
 </document>
