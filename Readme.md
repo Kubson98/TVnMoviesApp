@@ -1,6 +1,7 @@
-Simple App that takes API 
-- Movies
-- TV Series (Seasons and Episodes)
+The simple application summaries of movies and TV series.
+- MVC
+- REST API
+- CollectionView
 
 ![alt tag](https://user-images.githubusercontent.com/45259348/90385439-723a9180-e083-11ea-8cb6-113a891267e2.png)
 ![alt tag](https://user-images.githubusercontent.com/45259348/90385450-76ff4580-e083-11ea-8d9e-4dd504734f2e.png)
