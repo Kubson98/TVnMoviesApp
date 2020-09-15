@@ -92,7 +92,10 @@ extension HomeViewController: UISearchBarDelegate {
             resultsArray.removeAll()
             searchBar.endEditing(true)
             activityLoading.startAnimating()
-            if let result = searchTextField.text {
+            if var result = searchTextField.text {
+                result = String(result.map {
+                    $0 == " " ? "/" : $0
+                })
                 DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [weak self] in
                     self!.activityLoading.stopAnimating()
                     switch self?.pickSegmentControl.selectedSegmentIndex {
