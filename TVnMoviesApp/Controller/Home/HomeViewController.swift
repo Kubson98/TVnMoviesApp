@@ -88,8 +88,8 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout, UICollectionVi
 
 extension HomeViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        resultsArray.removeAll()
         if searchBar.text != "" {
-            resultsArray.removeAll()
             searchBar.endEditing(true)
             activityLoading.startAnimating()
             if var result = searchTextField.text {
@@ -122,8 +122,7 @@ extension HomeViewController: UISearchBarDelegate {
 
 extension HomeViewController: SearchDelegate {
     func didUpdateMovie(_ data: SearchData) {
-        resultsArray.removeAll()
-        for i in 0...9 {
+        for i in 0...data.results.count - 1 {
             resultsArray.append(data.results[i])
         }
     }
