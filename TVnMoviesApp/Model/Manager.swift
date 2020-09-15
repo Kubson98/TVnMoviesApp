@@ -46,7 +46,7 @@ class Manager {
     }
 
     func performRequestMovieSeries(idOfMovieOrTV: String, typeToWatch: String) {
-         let seasonsURL = "https://api.themoviedb.org/3/search/\(typeToWatch)?api_key=295a887b4441ab6428dca06b9bdb7469&language=en-US&page=1&include_adult=false&query=\(idOfMovieOrTV)"
+         let seasonsURL = "https://api.themoviedb.org/3/search/\(typeToWatch)?api_key=\(apiKey)&language=en-US&page=1&include_adult=false&query=\(idOfMovieOrTV)"
          if let url = URL(string: seasonsURL) {
              print(seasonsURL)
              let session = URLSession.shared
