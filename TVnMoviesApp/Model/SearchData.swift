@@ -9,7 +9,7 @@
 import Foundation
 
 struct SearchData: Codable {
-    var results: [ResultOfSearch]
+    var results: [ResultOfSearch]?
 }
 
 struct ResultOfSearch: Codable {

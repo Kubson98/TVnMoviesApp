@@ -129,9 +129,9 @@ extension HomeViewController: UISearchBarDelegate {
 
 extension HomeViewController: SearchDelegate {
     func didUpdateMovie(_ data: SearchData) {
-        if data.results.count != 0 {
-            for i in 0...data.results.count - 1 {
-                resultsArray.append(data.results[i])
+        if data.results!.count != 0 {
+            for i in 0...data.results!.count - 1 {
+                resultsArray.append(data.results![i])
             }
         } else {
             resultsArray.append(ResultOfSearch(original_name: nil, original_title: nil, poster_path: nil, backdrop_path: nil, release_date: nil, overview: nil, id: nil))

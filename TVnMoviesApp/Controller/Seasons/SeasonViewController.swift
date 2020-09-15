@@ -32,7 +32,7 @@ class SeasonViewController: UIViewController, UICollectionViewDelegateFlowLayout
     }
     
     func giveSeasonsData(data: [SeasonData]) {
-        seasonsArray = data[0].seasons
+        seasonsArray = data[0].seasons!
         if seasonsArray[0].name == "Specials"{
             seasonsArray.removeFirst()
         }
@@ -46,7 +46,7 @@ class SeasonViewController: UIViewController, UICollectionViewDelegateFlowLayout
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "seasonCell", for: indexPath) as! SeasonCollectionViewCell
         configureCard(view: cell)
-        var url = URL(string: "https://image.tmdb.org/t/p/w300\(seasonsArray[indexPath.row].poster_path)")!
+        let url = URL(string: "https://image.tmdb.org/t/p/w300\(seasonsArray[indexPath.row].poster_path!)")!
         if let data = try? Data(contentsOf: url) {
             cell.seasonImage.image = UIImage(data: data)
         }

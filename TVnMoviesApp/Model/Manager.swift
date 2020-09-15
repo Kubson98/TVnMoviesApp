@@ -98,7 +98,7 @@ class Manager {
         let decoder = JSONDecoder()
         do {
             let decodedData = try decoder.decode(EpisodeData.self, from: episodeData)
-            let result = decodedData.episodes
+            let result = decodedData.episodes!
             return result
         } catch {
             print(error)

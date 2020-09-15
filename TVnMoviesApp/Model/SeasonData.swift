@@ -9,13 +9,13 @@
 import Foundation
 
 struct SeasonData: Codable {
-    var seasons: [Seasons]
-    var backdrop_path: String
-    var overview: String
-    var name: String
+    var seasons: [Seasons]?
+    var backdrop_path: String?
+    var overview: String?
+    var name: String?
 }
 
 struct Seasons: Codable {
-    var poster_path: String
-    var name: String
+    var poster_path: String?
+    var name: String?
 }

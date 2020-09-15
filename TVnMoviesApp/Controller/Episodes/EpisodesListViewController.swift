@@ -38,11 +38,15 @@ class EpisodesListViewController: UIViewController, UICollectionViewDelegateFlow
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "episodeCell", for: indexPath) as! EpisodeCollectionViewCell
         seasonsVC.configureCard(view: cell)
         let row = episodesArray[indexPath.row]
-        let url = URL(string: "https://image.tmdb.org/t/p/w400\(row.still_path)")!
-        if let data = try? Data(contentsOf: url) {
-            cell.backgroundImage.image = UIImage(data: data)
+        if row.still_path == nil {
+            cell.backgroundImage.image = UIImage(named: "noImage2")
+        } else {
+            let url = URL(string: "https://image.tmdb.org/t/p/w400\(row.still_path!)")!
+            if let data = try? Data(contentsOf: url) {
+                cell.backgroundImage.image = UIImage(data: data)
+            }
         }
-        cell.seasonAndEpisode.text = "Season \(row.season_number) Episode \(row.episode_number)"
+        cell.seasonAndEpisode.text = "Season \(row.season_number!) Episode \(row.episode_number!)"
         cell.titleOfEpisode.text = row.name
         return cell
     }
@@ -50,11 +54,15 @@ class EpisodesListViewController: UIViewController, UICollectionViewDelegateFlow
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "detailVC") as? EpisodeDetailViewController
         let row = episodesArray[indexPath.row]
-        let url = URL(string: "https://image.tmdb.org/t/p/w400\(row.still_path)")!
-        if let data = try? Data(contentsOf: url) {
-            vc?.image = UIImage(data: data)
+        if row.still_path == nil {
+            vc?.image = UIImage(named: "noImage2")
+        } else {
+            let url = URL(string: "https://image.tmdb.org/t/p/w400\(row.still_path!)")!
+            if let data = try? Data(contentsOf: url) {
+                vc?.image = UIImage(data: data)
+            }
         }
-        vc?.number = "Season \(row.season_number) Episode \(row.episode_number)"
+        vc?.number = "Season \(row.season_number!) Episode \(row.episode_number!)"
         vc?.overview = row.overview
         vc?.titleEp = row.name
         self.navigationController?.pushViewController(vc!, animated: true)

@@ -9,14 +9,14 @@
 import Foundation
 
 struct EpisodeData: Codable {
-    var episodes: [DataOfEpisode]
+    var episodes: [DataOfEpisode]?
 }
 
 struct DataOfEpisode: Codable {
-    var episode_number: Int
-    var name: String
-    var overview: String
-    var season_number: Int
-    var still_path: String
+    var episode_number: Int?
+    var name: String?
+    var overview: String?
+    var season_number: Int?
+    var still_path: String?
 }
 
