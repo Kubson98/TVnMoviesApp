@@ -1,6 +1,6 @@
 //
-//  ViewController.swift
-//  searchMovies
+//  HomeViewController.swift
+//  TVnMoviesApp
 //
 //  Created by Kuba on 14/09/2020.
 //  Copyright © 2020 Kuba. All rights reserved.
@@ -88,24 +88,32 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout, UICollectionVi
 
 extension HomeViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        resultsArray.removeAll()
-        activityLoading.startAnimating()
-        if let result = searchTextField.text {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [weak self] in
-                self!.activityLoading.stopAnimating()
-                switch self?.pickSegmentControl.selectedSegmentIndex {
-                case 0:
-                    self?.manager.performRequestMovieSeries(idOfMovieOrTV: result, typeToWatch: "movie")
-                case 1:
-                    self?.manager.performRequestMovieSeries(idOfMovieOrTV: result, typeToWatch: "tv")
-                default:
-                    print(Error.self)
+        if searchBar.text != "" {
+            resultsArray.removeAll()
+            searchBar.endEditing(true)
+            activityLoading.startAnimating()
+            if let result = searchTextField.text {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [weak self] in
+                    self!.activityLoading.stopAnimating()
+                    switch self?.pickSegmentControl.selectedSegmentIndex {
+                    case 0:
+                        self?.manager.performRequestMovieSeries(idOfMovieOrTV: result, typeToWatch: "movie")
+                    case 1:
+                        self?.manager.performRequestMovieSeries(idOfMovieOrTV: result, typeToWatch: "tv")
+                    default:
+                        print(Error.self)
+                    }
+                    repeat {
+                        self?.collectionView.reloadData()
+                    } while self?.resultsArray.count == 0
                 }
-                repeat {
-                    self?.collectionView.reloadData()
-                } while self?.resultsArray.count == 0
             }
         }
+    }
+    
+    func searchBarShouldReturn(_ searchBar: UISearchBar) -> Bool {
+        searchBar.endEditing(true)
+        return false
     }
 }
 

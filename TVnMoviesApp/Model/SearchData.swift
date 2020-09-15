@@ -1,6 +1,6 @@
 //
-//  AlbumData.swift
-//  SuitsAppBeta
+//  SearchData.swift
+//  SuitsApp
 //
 //  Created by Kuba on 12/08/2020.
 //  Copyright © 2020 Kuba. All rights reserved.

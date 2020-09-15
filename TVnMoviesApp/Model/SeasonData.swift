@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  SeasonData.swift
 //  SuitsAppBeta
 //
 //  Created by Kuba on 07/08/2020.

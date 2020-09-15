@@ -1,6 +1,6 @@
 //
-//  CollectionViewCell.swift
-//  searchMovies
+//  HomeViewController.swift
+//  TVnMoviesApp
 //
 //  Created by Kuba on 15/09/2020.
 //  Copyright © 2020 Kuba. All rights reserved.
