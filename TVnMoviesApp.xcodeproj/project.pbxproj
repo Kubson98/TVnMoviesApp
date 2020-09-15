@@ -8,16 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		8C21159A24ED351A00EC8708 /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C21159924ED351A00EC8708 /* Link.swift */; };
-		8C396EAA24E2AB28005185FA /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C396EA924E2AB28005185FA /* HomeTableViewController.swift */; };
-		8C396EAD24E2AB62005185FA /* AlbumCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C396EAB24E2AB62005185FA /* AlbumCollectionViewCell.swift */; };
-		8C396EAE24E2AB62005185FA /* AlbumCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C396EAC24E2AB62005185FA /* AlbumCollectionViewCell.xib */; };
-		8C396EB224E2AF8B005185FA /* AlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C396EB024E2AF8B005185FA /* AlbumTableViewCell.swift */; };
-		8C396EB324E2AF8B005185FA /* AlbumTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C396EB124E2AF8B005185FA /* AlbumTableViewCell.xib */; };
 		8C71BD7C24DDF9CE0014E416 /* SeasonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C71BD7B24DDF9CE0014E416 /* SeasonData.swift */; };
 		8C743F1424E34EC600D911D1 /* MoviesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C743F1324E34EC600D911D1 /* MoviesData.swift */; };
 		8C7E826B24DF149300812C9A /* EpisodeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7E826924DF149300812C9A /* EpisodeCollectionViewCell.swift */; };
 		8C7E826C24DF149300812C9A /* EpisodeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C7E826A24DF149300812C9A /* EpisodeCollectionViewCell.xib */; };
 		8C7E826E24DF234D00812C9A /* EpisodesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7E826D24DF234C00812C9A /* EpisodesListViewController.swift */; };
+		8C98E57625103EAF004CAD6C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C98E57525103EAF004CAD6C /* HomeViewController.swift */; };
+		8C98E57825103F21004CAD6C /* MoviesData2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C98E57725103F20004CAD6C /* MoviesData2.swift */; };
+		8C98E57E25104318004CAD6C /* HomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C98E57C25104318004CAD6C /* HomeCollectionViewCell.xib */; };
+		8C98E57F25104318004CAD6C /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C98E57D25104318004CAD6C /* HomeCollectionViewCell.swift */; };
 		8CA7506A24DD6EE4005B6CB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA7506924DD6EE4005B6CB8 /* AppDelegate.swift */; };
 		8CA7506C24DD6EE4005B6CB8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA7506B24DD6EE4005B6CB8 /* SceneDelegate.swift */; };
 		8CA7506E24DD6EE4005B6CB8 /* SeasonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA7506D24DD6EE4005B6CB8 /* SeasonViewController.swift */; };
@@ -34,16 +33,15 @@
 
 /* Begin PBXFileReference section */
 		8C21159924ED351A00EC8708 /* Link.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Link.swift; sourceTree = "<group>"; };
-		8C396EA924E2AB28005185FA /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
-		8C396EAB24E2AB62005185FA /* AlbumCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCollectionViewCell.swift; sourceTree = "<group>"; };
-		8C396EAC24E2AB62005185FA /* AlbumCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlbumCollectionViewCell.xib; sourceTree = "<group>"; };
-		8C396EB024E2AF8B005185FA /* AlbumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTableViewCell.swift; sourceTree = "<group>"; };
-		8C396EB124E2AF8B005185FA /* AlbumTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlbumTableViewCell.xib; sourceTree = "<group>"; };
 		8C71BD7B24DDF9CE0014E416 /* SeasonData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonData.swift; sourceTree = "<group>"; };
 		8C743F1324E34EC600D911D1 /* MoviesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesData.swift; sourceTree = "<group>"; };
 		8C7E826924DF149300812C9A /* EpisodeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeCollectionViewCell.swift; sourceTree = "<group>"; };
 		8C7E826A24DF149300812C9A /* EpisodeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EpisodeCollectionViewCell.xib; sourceTree = "<group>"; };
 		8C7E826D24DF234C00812C9A /* EpisodesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesListViewController.swift; sourceTree = "<group>"; };
+		8C98E57525103EAF004CAD6C /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		8C98E57725103F20004CAD6C /* MoviesData2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesData2.swift; sourceTree = "<group>"; };
+		8C98E57C25104318004CAD6C /* HomeCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeCollectionViewCell.xib; sourceTree = "<group>"; };
+		8C98E57D25104318004CAD6C /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		8CA7506624DD6EE4005B6CB8 /* TVnMoviesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TVnMoviesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CA7506924DD6EE4005B6CB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8CA7506B24DD6EE4005B6CB8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,24 +69,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8C396EAF24E2AF69005185FA /* AlbumCollectionViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				8C396EAB24E2AB62005185FA /* AlbumCollectionViewCell.swift */,
-				8C396EAC24E2AB62005185FA /* AlbumCollectionViewCell.xib */,
-			);
-			path = AlbumCollectionViewCell;
-			sourceTree = "<group>";
-		};
-		8C396EB424E2AF92005185FA /* AlbumTableViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				8C396EB024E2AF8B005185FA /* AlbumTableViewCell.swift */,
-				8C396EB124E2AF8B005185FA /* AlbumTableViewCell.xib */,
-			);
-			path = AlbumTableViewCell;
-			sourceTree = "<group>";
-		};
 		8C7E826724DF144400812C9A /* SeasonCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -107,12 +87,21 @@
 			path = EpisodeCell;
 			sourceTree = "<group>";
 		};
+		8C98E58025104EAA004CAD6C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				8C98E57525103EAF004CAD6C /* HomeViewController.swift */,
+				8C98E57D25104318004CAD6C /* HomeCollectionViewCell.swift */,
+				8C98E57C25104318004CAD6C /* HomeCollectionViewCell.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		8CA7505D24DD6EE4005B6CB8 = {
 			isa = PBXGroup;
 			children = (
 				8CA7506824DD6EE4005B6CB8 /* TVnMoviesApp */,
 				8CA7506724DD6EE4005B6CB8 /* Products */,
-				A0FFCCED3F98A28E6B54A20B /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -144,6 +133,7 @@
 			children = (
 				8CA7507E24DD7316005B6CB8 /* EpisodeData.swift */,
 				8CA7507D24DD7316005B6CB8 /* Manager.swift */,
+				8C98E57725103F20004CAD6C /* MoviesData2.swift */,
 				8C71BD7B24DDF9CE0014E416 /* SeasonData.swift */,
 				8C743F1324E34EC600D911D1 /* MoviesData.swift */,
 			);
@@ -168,16 +158,6 @@
 			path = "Support Files";
 			sourceTree = "<group>";
 		};
-		8CA8668C24EA97C3004FA8F6 /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				8C396EA924E2AB28005185FA /* HomeTableViewController.swift */,
-				8C396EAF24E2AF69005185FA /* AlbumCollectionViewCell */,
-				8C396EB424E2AF92005185FA /* AlbumTableViewCell */,
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
 		8CA8668D24EA97E8004FA8F6 /* Episodes */ = {
 			isa = PBXGroup;
 			children = (
@@ -200,18 +180,11 @@
 		8CA8668F24EA981F004FA8F6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				8C98E58025104EAA004CAD6C /* Home */,
 				8CA8668E24EA97FB004FA8F6 /* Seasons */,
 				8CA8668D24EA97E8004FA8F6 /* Episodes */,
-				8CA8668C24EA97C3004FA8F6 /* Home */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		A0FFCCED3F98A28E6B54A20B /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,8 +249,7 @@
 				8CA7508424DDF098005B6CB8 /* SeasonCollectionViewCell.xib in Resources */,
 				8CA7507324DD6EE6005B6CB8 /* Assets.xcassets in Resources */,
 				8CA7507124DD6EE4005B6CB8 /* Main.storyboard in Resources */,
-				8C396EB324E2AF8B005185FA /* AlbumTableViewCell.xib in Resources */,
-				8C396EAE24E2AB62005185FA /* AlbumCollectionViewCell.xib in Resources */,
+				8C98E57E25104318004CAD6C /* HomeCollectionViewCell.xib in Resources */,
 				8C7E826C24DF149300812C9A /* EpisodeCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,12 +267,12 @@
 				8C21159A24ED351A00EC8708 /* Link.swift in Sources */,
 				8CA7506A24DD6EE4005B6CB8 /* AppDelegate.swift in Sources */,
 				8C743F1424E34EC600D911D1 /* MoviesData.swift in Sources */,
-				8C396EB224E2AF8B005185FA /* AlbumTableViewCell.swift in Sources */,
-				8C396EAD24E2AB62005185FA /* AlbumCollectionViewCell.swift in Sources */,
 				8C7E826B24DF149300812C9A /* EpisodeCollectionViewCell.swift in Sources */,
+				8C98E57625103EAF004CAD6C /* HomeViewController.swift in Sources */,
+				8C98E57F25104318004CAD6C /* HomeCollectionViewCell.swift in Sources */,
 				8C71BD7C24DDF9CE0014E416 /* SeasonData.swift in Sources */,
-				8C396EAA24E2AB28005185FA /* HomeTableViewController.swift in Sources */,
 				8CA8669324EA987D004FA8F6 /* ApiKey.swift in Sources */,
+				8C98E57825103F21004CAD6C /* MoviesData2.swift in Sources */,
 				8CA7506C24DD6EE4005B6CB8 /* SceneDelegate.swift in Sources */,
 				8CA7507F24DD7316005B6CB8 /* Manager.swift in Sources */,
 				8CA7508024DD7316005B6CB8 /* EpisodeData.swift in Sources */,

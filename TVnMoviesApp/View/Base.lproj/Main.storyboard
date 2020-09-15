@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CQE-pd-lvQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SAZ-aT-frC">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -7,31 +7,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home Table View Controller-->
-        <scene sceneID="4a8-IR-Qjl">
-            <objects>
-                <tableViewController storyboardIdentifier="Home" id="MK3-Gt-5Wa" customClass="HomeTableViewController" customModule="TVnMoviesApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="7uA-xu-PJe">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <connections>
-                            <outlet property="dataSource" destination="MK3-Gt-5Wa" id="Z92-hp-FKi"/>
-                            <outlet property="delegate" destination="MK3-Gt-5Wa" id="t56-Ux-zsz"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="dfj-c1-VbR"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="goTo" id="E15-5j-fZt"/>
-                        <segue destination="vTD-fO-IPT" kind="show" id="xQv-Ck-KCc"/>
-                    </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4Dl-FW-mQV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4878" y="-400"/>
-        </scene>
         <!--Season View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -41,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bt2-mX-qX5">
-                                <rect key="frame" x="56" y="200" width="300" height="497"/>
+                                <rect key="frame" x="56" y="198" width="300" height="497"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bdf-3S-riP">
@@ -103,7 +78,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cyF-fd-Sgs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5786" y="652"/>
+            <point key="canvasLocation" x="6204" y="652"/>
         </scene>
         <!--Episode Detail View Controller-->
         <scene sceneID="ATo-eF-XLc">
@@ -188,38 +163,95 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7yt-yc-gjP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6566" y="-375"/>
+            <point key="canvasLocation" x="7871.0144927536239" y="-384.375"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="vR3-W3-Twc">
+            <objects>
+                <viewController id="eku-Ft-X0d" customClass="HomeViewController" customModule="TVnMoviesApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cQw-P0-nbB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="fJ4-Zw-1vv">
+                                <rect key="frame" x="0.0" y="105" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="SOf-sx-46o">
+                                <rect key="frame" x="20" y="191" width="374" height="32"/>
+                                <segments>
+                                    <segment title="Movie"/>
+                                    <segment title="TV"/>
+                                </segments>
+                            </segmentedControl>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mAT-91-mYe">
+                                <rect key="frame" x="20" y="243" width="374" height="619"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="3uO-Ch-Sju">
+                                    <size key="itemSize" width="374" height="386"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <activityIndicatorView key="backgroundView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" id="xTI-Rn-egC">
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="619"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="color" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </activityIndicatorView>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="mAT-91-mYe" firstAttribute="bottom" secondItem="nph-WK-pEa" secondAttribute="bottom" id="0Sb-t1-YCA"/>
+                            <constraint firstItem="mAT-91-mYe" firstAttribute="top" secondItem="SOf-sx-46o" secondAttribute="bottom" constant="21" id="BRl-G5-itO"/>
+                            <constraint firstItem="SOf-sx-46o" firstAttribute="top" secondItem="fJ4-Zw-1vv" secondAttribute="bottom" constant="30" id="CQm-yW-E9h"/>
+                            <constraint firstItem="SOf-sx-46o" firstAttribute="leading" secondItem="nph-WK-pEa" secondAttribute="leading" constant="20" id="GyJ-8d-0JD"/>
+                            <constraint firstItem="fJ4-Zw-1vv" firstAttribute="top" secondItem="nph-WK-pEa" secondAttribute="top" constant="17" id="IjC-zd-yky"/>
+                            <constraint firstItem="fJ4-Zw-1vv" firstAttribute="leading" secondItem="nph-WK-pEa" secondAttribute="leading" id="YsJ-rg-BHR"/>
+                            <constraint firstItem="nph-WK-pEa" firstAttribute="trailing" secondItem="mAT-91-mYe" secondAttribute="trailing" constant="20" id="eIw-XF-AVu"/>
+                            <constraint firstItem="mAT-91-mYe" firstAttribute="leading" secondItem="nph-WK-pEa" secondAttribute="leading" constant="20" id="ncX-mJ-Bf5"/>
+                            <constraint firstItem="nph-WK-pEa" firstAttribute="trailing" secondItem="SOf-sx-46o" secondAttribute="trailing" constant="20" id="sNA-XC-JBn"/>
+                            <constraint firstItem="fJ4-Zw-1vv" firstAttribute="trailing" secondItem="nph-WK-pEa" secondAttribute="trailing" id="tae-JK-cb3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nph-WK-pEa"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Uuu-06-Yue"/>
+                    <connections>
+                        <outlet property="activityLoading" destination="xTI-Rn-egC" id="d0b-JF-1ry"/>
+                        <outlet property="collectionView" destination="mAT-91-mYe" id="Ha0-f8-aRV"/>
+                        <outlet property="pickSegmentControl" destination="SOf-sx-46o" id="Mza-us-Qna"/>
+                        <outlet property="searchTextField" destination="fJ4-Zw-1vv" id="JcR-0o-uAy"/>
+                        <segue destination="vTD-fO-IPT" kind="show" id="Yq7-P2-vLm"/>
+                        <segue destination="BYZ-38-t0r" kind="show" id="opr-Mw-Fsn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tsp-mD-yAg" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5815.9420289855079" y="-172.09821428571428"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="ehp-58-Ue8">
+        <scene sceneID="rl2-mF-OmD">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CQE-pd-lvQ" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SAZ-aT-frC" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="Sq0-a1-Tbb">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uS8-hE-IDQ">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </textAttributes>
-                        <textAttributes key="largeTitleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="MK3-Gt-5Wa" kind="relationship" relationship="rootViewController" id="05U-FV-Z2N"/>
+                        <segue destination="eku-Ft-X0d" kind="relationship" relationship="rootViewController" id="cbb-7w-rj4"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FnP-Zu-lxH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="teR-EZ-QHh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3348" y="-401"/>
+            <point key="canvasLocation" x="3533" y="-172"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="xQv-Ck-KCc"/>
+        <segue reference="Yq7-P2-vLm"/>
     </inferredMetricsTieBreakers>
 </document>

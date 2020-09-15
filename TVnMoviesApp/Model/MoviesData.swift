@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct MoviesData: Codable {
+struct MoviesData2: Codable {
     var backdrop_path: String
     var overview: String
     var original_title: String
