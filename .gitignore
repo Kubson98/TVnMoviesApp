@@ -38,6 +38,7 @@ playground.xcworkspace
 ##api key
 
 /TVnMoviesApp/ApiKey.swift
+/TVnMoviesApp/Link.swift
 ApiKey.swift
 TVnMoviesApp/ApiKey.swift
 ./TVnMoviesApp/ApiKey.swift
