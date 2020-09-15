@@ -17,6 +17,7 @@ class HomeViewController: UIViewController {
     var manager = Manager()
     var resultsArray: [ResultOfSearch] = []
     let layout = UICollectionViewFlowLayout()
+    let seasonVC = SeasonViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +42,7 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout, UICollectionVi
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "homeCell", for: indexPath) as! HomeCollectionViewCell
         let row = resultsArray[indexPath.row]
+        seasonVC.configureCard(view: cell)
         if row.poster_path == nil {
             cell.imageResult.image = UIImage(named: "noImage")
         } else {
