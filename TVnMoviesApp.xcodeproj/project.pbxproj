@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8C21159A24ED351A00EC8708 /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C21159924ED351A00EC8708 /* Link.swift */; };
 		8C71BD7C24DDF9CE0014E416 /* SeasonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C71BD7B24DDF9CE0014E416 /* SeasonData.swift */; };
 		8C7E826B24DF149300812C9A /* EpisodeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7E826924DF149300812C9A /* EpisodeCollectionViewCell.swift */; };
 		8C7E826C24DF149300812C9A /* EpisodeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C7E826A24DF149300812C9A /* EpisodeCollectionViewCell.xib */; };
@@ -31,7 +30,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8C21159924ED351A00EC8708 /* Link.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Link.swift; sourceTree = "<group>"; };
 		8C71BD7B24DDF9CE0014E416 /* SeasonData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonData.swift; sourceTree = "<group>"; };
 		8C7E826924DF149300812C9A /* EpisodeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeCollectionViewCell.swift; sourceTree = "<group>"; };
 		8C7E826A24DF149300812C9A /* EpisodeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EpisodeCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -121,7 +119,6 @@
 				8CA7507224DD6EE6005B6CB8 /* Assets.xcassets */,
 				8CA7507724DD6EE6005B6CB8 /* Info.plist */,
 				8CA8669224EA987D004FA8F6 /* ApiKey.swift */,
-				8C21159924ED351A00EC8708 /* Link.swift */,
 			);
 			path = TVnMoviesApp;
 			sourceTree = "<group>";
@@ -261,7 +258,6 @@
 				8C7E826E24DF234D00812C9A /* EpisodesListViewController.swift in Sources */,
 				8CD4727724E16D120092EF83 /* EpisodeDetailViewController.swift in Sources */,
 				8CA7506E24DD6EE4005B6CB8 /* SeasonViewController.swift in Sources */,
-				8C21159A24ED351A00EC8708 /* Link.swift in Sources */,
 				8CA7506A24DD6EE4005B6CB8 /* AppDelegate.swift in Sources */,
 				8C7E826B24DF149300812C9A /* EpisodeCollectionViewCell.swift in Sources */,
 				8C98E57625103EAF004CAD6C /* HomeViewController.swift in Sources */,

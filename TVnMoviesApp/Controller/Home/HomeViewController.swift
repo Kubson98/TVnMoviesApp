@@ -42,6 +42,7 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout, UICollectionVi
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "homeCell", for: indexPath) as! HomeCollectionViewCell
         let row = resultsArray[indexPath.row]
+        cell.isUserInteractionEnabled = true
         seasonVC.configureCard(view: cell)
         if row.poster_path == nil {
             cell.imageResult.image = UIImage(named: "noImage")
@@ -53,9 +54,13 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout, UICollectionVi
         }
         if row.original_title != nil {
             cell.titleResult.text = row.original_title!
+        } else if row.original_name == nil {
+            cell.isUserInteractionEnabled = false
+            cell.titleResult.text = "no result"
         } else {
             cell.titleResult.text = row.original_name!
         }
+        
         return cell
     }
     
@@ -124,9 +129,14 @@ extension HomeViewController: UISearchBarDelegate {
 
 extension HomeViewController: SearchDelegate {
     func didUpdateMovie(_ data: SearchData) {
-        for i in 0...data.results.count - 1 {
-            resultsArray.append(data.results[i])
+        if data.results.count != 0 {
+            for i in 0...data.results.count - 1 {
+                resultsArray.append(data.results[i])
+            }
+        } else {
+            resultsArray.append(ResultOfSearch(original_name: nil, original_title: nil, poster_path: nil, backdrop_path: nil, release_date: nil, overview: nil, id: nil))
         }
     }
 }
+
 
