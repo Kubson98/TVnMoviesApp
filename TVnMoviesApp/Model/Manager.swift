@@ -16,19 +16,15 @@ protocol EpisodesDelegate: AnyObject {
     func giveEpisodesData(data: [DataOfEpisode])
 }
 
-protocol ManagerProtocol: AnyObject {
-    func didUpdateMovie(_ data: MoviesData)
+protocol SearchDelegate: AnyObject {
+    func didUpdateMovie(_ data: SearchData)
 }
-//protocol MoviesDelegate: AnyObject {
-//    func giveMoviesData(data: [MoviesData])
-//}
+
 
 class Manager {
     weak var delegateSeasons: SeasonsDelegate?
     weak var delegateEpisodes: EpisodesDelegate?
-    weak var delegateHome: ManagerProtocol?
-    //weak var delegateMovies: MoviesDelegate?
-    weak var delegate: SeasonViewController!
+    weak var delegateSearch: SearchDelegate?
     
     
     // MARK: - URL REQUEST
@@ -48,24 +44,7 @@ class Manager {
             task.resume()
         }
     }
-    
-//    func performRequestMovieSeries(idOfMovieOrTV: Int, typeToWatch: String) {
-//        let seasonsURL = "https://api.themoviedb.org/3/\(typeToWatch)/\(idOfMovieOrTV)?api_key=\(apiKey)"
-//        if let url = URL(string: seasonsURL) {
-//            let session = URLSession.shared
-//            let task = session.dataTask(with: url) { [weak self] (data, response, error) in
-//                if error != nil {
-//                    return
-//                }
-//                if let safeData = data {
-//
-//                    let test = self?.parseJSONforMovies(seasonData: safeData)
-//                    self?.delegateMovies?.giveMoviesData(data: test as! [MoviesData])
-//                }
-//            }
-//            task.resume()
-//        }
-//    }
+
     func performRequestMovieSeries(idOfMovieOrTV: String, typeToWatch: String) {
          let seasonsURL = "https://api.themoviedb.org/3/search/\(typeToWatch)?api_key=295a887b4441ab6428dca06b9bdb7469&language=en-US&page=1&include_adult=false&query=\(idOfMovieOrTV)"
          if let url = URL(string: seasonsURL) {
@@ -78,7 +57,7 @@ class Manager {
                  if let safeData = data {
                      
                      let test = self?.parseJSONforMovies(seasonData: safeData)
-                    self?.delegateHome!.didUpdateMovie(test as! MoviesData)
+                    self?.delegateSearch!.didUpdateMovie(test as! SearchData)
                  }
              }
              task.resume()
@@ -126,28 +105,16 @@ class Manager {
             return error as! [DataOfEpisode]
         }
     }
-    
-//    private func parseJSONforMovies(seasonData: Data) -> [MoviesData] {
-//        let decoder = JSONDecoder()
-//        do {
-//            let decodedData = try decoder.decode(MoviesData.self, from: seasonData)
-//            let result = [decodedData.self]
-//            return result
-//        } catch {
-//            print(error)
-//            return error as! [MoviesData]
-//        }
-//    }
-//
-        private func parseJSONforMovies(seasonData: Data) -> MoviesData {
+
+        private func parseJSONforMovies(seasonData: Data) -> SearchData {
             let decoder = JSONDecoder()
             do {
-                let decodedData = try decoder.decode(MoviesData.self, from: seasonData)
+                let decodedData = try decoder.decode(SearchData.self, from: seasonData)
                 let result = decodedData.self
                 return result
             } catch {
                 print(error)
-                return error as! MoviesData
+                return error as! SearchData
             }
         }
     }

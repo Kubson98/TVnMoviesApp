@@ -20,7 +20,7 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        manager.delegateHome = self
+        manager.delegateSearch = self
         searchTextField.delegate = self
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -65,9 +65,13 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout, UICollectionVi
         if resultsArray[indexPath.row].original_title != nil  {
             vc = vcDetail!
             let rowMovies = resultsArray[indexPath.row]
-            let url = URL(string: "https://image.tmdb.org/t/p/w400\(rowMovies.backdrop_path!)")!
-            if let data = try? Data(contentsOf: url) {
-                vcDetail?.image = UIImage(data: data)
+            if rowMovies.backdrop_path == nil {
+                vcDetail?.image = UIImage(named: "noImage2")
+            } else {
+                let url = URL(string: "https://image.tmdb.org/t/p/w400\(rowMovies.backdrop_path!)")!
+                if let data = try? Data(contentsOf: url) {
+                    vcDetail?.image = UIImage(data: data)
+                }
             }
             let year = String((rowMovies.release_date)!.prefix(4))
             vcDetail?.overview = rowMovies.overview!
@@ -88,30 +92,29 @@ extension HomeViewController: UISearchBarDelegate {
         activityLoading.startAnimating()
         if let result = searchTextField.text {
             DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [weak self] in
-            self!.activityLoading.stopAnimating()
+                self!.activityLoading.stopAnimating()
                 switch self?.pickSegmentControl.selectedSegmentIndex {
-            case 0:
-                self?.manager.performRequestMovieSeries(idOfMovieOrTV: result, typeToWatch: "movie")
-            case 1:
-                self?.manager.performRequestMovieSeries(idOfMovieOrTV: result, typeToWatch: "tv")
-            default:
-                print(Error.self)
-            }
-            repeat {
-                self?.collectionView.reloadData()
-            } while self?.resultsArray.count == 0
+                case 0:
+                    self?.manager.performRequestMovieSeries(idOfMovieOrTV: result, typeToWatch: "movie")
+                case 1:
+                    self?.manager.performRequestMovieSeries(idOfMovieOrTV: result, typeToWatch: "tv")
+                default:
+                    print(Error.self)
+                }
+                repeat {
+                    self?.collectionView.reloadData()
+                } while self?.resultsArray.count == 0
             }
         }
     }
 }
 
-extension HomeViewController: ManagerProtocol {
-    func didUpdateMovie(_ data: MoviesData) {
+extension HomeViewController: SearchDelegate {
+    func didUpdateMovie(_ data: SearchData) {
         resultsArray.removeAll()
         for i in 0...9 {
             resultsArray.append(data.results[i])
         }
     }
-    
 }
 

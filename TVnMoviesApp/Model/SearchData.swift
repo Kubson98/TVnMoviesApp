@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct MoviesData: Codable {
+struct SearchData: Codable {
     var results: [ResultOfSearch]
 }
 
