@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class HomeViewController: UIViewController {
     @IBOutlet weak var searchTextField: UISearchBar!
@@ -15,9 +17,11 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var activityLoading: UIActivityIndicatorView!
     
     var manager = Manager()
-    var resultsArray: [ResultOfSearch] = []
+    let disposeBag = DisposeBag()
+    let resultsArray = Variable<[ResultOfSearch]>([])
     let layout = UICollectionViewFlowLayout()
     let seasonVC = SeasonViewController()
+    let time: RxTimeInterval = DispatchTimeInterval.milliseconds(500)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,17 +35,46 @@ class HomeViewController: UIViewController {
         layout.minimumLineSpacing = 0
         collectionView.register(UINib(nibName: "HomeCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "homeCell")
         activityLoading.hidesWhenStopped = true
+        
+        searchTextField.rx.text.orEmpty.asObservable()
+            .debounce(DispatchTimeInterval.milliseconds(500), scheduler: MainScheduler.instance)
+            .distinctUntilChanged()
+            .filter{ !$0.isEmpty }
+            .subscribe {
+                print($0.element ?? $0)
+                self.activityLoading.startAnimating()
+                    if var result = $0.element {
+                        result = String(result.map {
+                            $0 == " " ? "/" : $0
+                        })
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [weak self] in
+                            self!.activityLoading.stopAnimating()
+                            switch self?.pickSegmentControl.selectedSegmentIndex {
+                            case 0:
+                                self?.manager.performRequestMovieSeries(idOfMovieOrTV: result, typeToWatch: "movie")
+                            case 1:
+                                self?.manager.performRequestMovieSeries(idOfMovieOrTV: result, typeToWatch: "tv")
+                            default:
+                                print(Error.self)
+                            }
+                            repeat {
+                                self?.collectionView.reloadData()
+                            } while self?.resultsArray.value.count == 0
+                        }
+                    }
+            }
+            .disposed(by: disposeBag)
     }
 }
 
 extension HomeViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return resultsArray.count
+        return resultsArray.value.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "homeCell", for: indexPath) as! HomeCollectionViewCell
-        let row = resultsArray[indexPath.row]
+        let row = resultsArray.value[indexPath.row]
         cell.isUserInteractionEnabled = true
         seasonVC.configureCard(view: cell)
         if row.poster_path == nil {
@@ -69,9 +102,9 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout, UICollectionVi
         let vcDetail = storyboard?.instantiateViewController(withIdentifier: "detailVC") as? EpisodeDetailViewController
         
         var vc = UIViewController()
-        if resultsArray[indexPath.row].original_title != nil  {
+        if resultsArray.value[indexPath.row].original_title != nil  {
             vc = vcDetail!
-            let rowMovies = resultsArray[indexPath.row]
+            let rowMovies = resultsArray.value[indexPath.row]
             if rowMovies.backdrop_path == nil {
                 vcDetail?.image = UIImage(named: "noImage2")
             } else {
@@ -86,7 +119,7 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout, UICollectionVi
             vcDetail?.number = "(\(year))"
         } else {
             vc = vcSeasons!
-            vcSeasons?.season = resultsArray[indexPath.row].id!
+            vcSeasons?.season = resultsArray.value[indexPath.row].id!
         }
         
         self.navigationController?.pushViewController(vc, animated: true)
@@ -95,7 +128,7 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout, UICollectionVi
 
 extension HomeViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        resultsArray.removeAll()
+        resultsArray.value.removeAll()
         if searchBar.text != "" {
             searchBar.endEditing(true)
             activityLoading.startAnimating()
@@ -115,7 +148,7 @@ extension HomeViewController: UISearchBarDelegate {
                     }
                     repeat {
                         self?.collectionView.reloadData()
-                    } while self?.resultsArray.count == 0
+                    } while self?.resultsArray.value.count == 0
                 }
             }
         }
@@ -131,10 +164,10 @@ extension HomeViewController: SearchDelegate {
     func didUpdateMovie(_ data: SearchData) {
         if data.results!.count != 0 {
             for i in 0...data.results!.count - 1 {
-                resultsArray.append(data.results![i])
+                resultsArray.value.append(data.results![i])
             }
         } else {
-            resultsArray.append(ResultOfSearch(original_name: nil, original_title: nil, poster_path: nil, backdrop_path: nil, release_date: nil, overview: nil, id: nil))
+            resultsArray.value.append(ResultOfSearch(original_name: nil, original_title: nil, poster_path: nil, backdrop_path: nil, release_date: nil, overview: nil, id: nil))
         }
     }
 }
