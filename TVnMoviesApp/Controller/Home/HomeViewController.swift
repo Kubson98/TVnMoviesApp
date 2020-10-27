@@ -26,7 +26,6 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         manager.delegateSearch = self
-        searchTextField.delegate = self
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.collectionViewLayout = layout
@@ -35,13 +34,13 @@ class HomeViewController: UIViewController {
         layout.minimumLineSpacing = 0
         collectionView.register(UINib(nibName: "HomeCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "homeCell")
         activityLoading.hidesWhenStopped = true
-        
         searchTextField.rx.text.orEmpty.asObservable()
             .debounce(DispatchTimeInterval.milliseconds(500), scheduler: MainScheduler.instance)
             .distinctUntilChanged()
             .filter{ !$0.isEmpty }
             .subscribe {
-                print($0.element ?? $0)
+                self.resultsArray.value.removeAll()
+                self.collectionView.reloadData()
                 self.activityLoading.startAnimating()
                     if var result = $0.element {
                         result = String(result.map {
@@ -62,6 +61,7 @@ class HomeViewController: UIViewController {
                             } while self?.resultsArray.value.count == 0
                         }
                     }
+                self.searchTextField.endEditing(true)
             }
             .disposed(by: disposeBag)
     }
@@ -123,40 +123,6 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout, UICollectionVi
         }
         
         self.navigationController?.pushViewController(vc, animated: true)
-    }
-}
-
-extension HomeViewController: UISearchBarDelegate {
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        resultsArray.value.removeAll()
-        if searchBar.text != "" {
-            searchBar.endEditing(true)
-            activityLoading.startAnimating()
-            if var result = searchTextField.text {
-                result = String(result.map {
-                    $0 == " " ? "/" : $0
-                })
-                DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [weak self] in
-                    self!.activityLoading.stopAnimating()
-                    switch self?.pickSegmentControl.selectedSegmentIndex {
-                    case 0:
-                        self?.manager.performRequestMovieSeries(idOfMovieOrTV: result, typeToWatch: "movie")
-                    case 1:
-                        self?.manager.performRequestMovieSeries(idOfMovieOrTV: result, typeToWatch: "tv")
-                    default:
-                        print(Error.self)
-                    }
-                    repeat {
-                        self?.collectionView.reloadData()
-                    } while self?.resultsArray.value.count == 0
-                }
-            }
-        }
-    }
-    
-    func searchBarShouldReturn(_ searchBar: UISearchBar) -> Bool {
-        searchBar.endEditing(true)
-        return false
     }
 }
 

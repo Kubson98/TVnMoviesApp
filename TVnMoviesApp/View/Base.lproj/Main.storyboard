@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SAZ-aT-frC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SAZ-aT-frC">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -28,8 +30,8 @@
                                 <cells/>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" id="gkX-2P-B9b"/>
                     <connections>
@@ -61,6 +63,7 @@
                                 <cells/>
                             </collectionView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="XK9-O9-SVe"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="XQn-re-VsC" firstAttribute="top" secondItem="XK9-O9-SVe" secondAttribute="top" id="E7V-7m-xpA"/>
@@ -68,7 +71,6 @@
                             <constraint firstItem="XQn-re-VsC" firstAttribute="trailing" secondItem="XK9-O9-SVe" secondAttribute="trailing" id="f1N-KV-DOV"/>
                             <constraint firstItem="XQn-re-VsC" firstAttribute="leading" secondItem="XK9-O9-SVe" secondAttribute="leading" id="h2m-0V-2SP"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="XK9-O9-SVe"/>
                     </view>
                     <navigationItem key="navigationItem" id="KDv-Cc-osT"/>
                     <connections>
@@ -141,6 +143,7 @@
                                 <viewLayoutGuide key="frameLayoutGuide" id="1WP-VW-6Ue"/>
                             </scrollView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="kYd-yu-qsP"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Klg-MW-wCm" firstAttribute="leading" secondItem="kYd-yu-qsP" secondAttribute="leading" id="CKw-yr-uVl"/>
@@ -149,7 +152,6 @@
                             <constraint firstItem="Klg-MW-wCm" firstAttribute="height" secondItem="kYd-yu-qsP" secondAttribute="height" id="hZO-l1-ZSF"/>
                             <constraint firstItem="Klg-MW-wCm" firstAttribute="top" secondItem="kYd-yu-qsP" secondAttribute="top" id="jIf-IA-3To"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="kYd-yu-qsP"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" id="R6n-G7-5Yd"/>
@@ -176,7 +178,7 @@
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="fJ4-Zw-1vv">
                                 <rect key="frame" x="0.0" y="105" width="414" height="56"/>
                                 <color key="barTintColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                                <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="SOf-sx-46o">
                                 <rect key="frame" x="20" y="191" width="374" height="32"/>
@@ -199,11 +201,12 @@
                                 <activityIndicatorView key="backgroundView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" id="xTI-Rn-egC">
                                     <rect key="frame" x="0.0" y="0.0" width="374" height="619"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <color key="color" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="color" systemColor="linkColor"/>
                                 </activityIndicatorView>
                                 <cells/>
                             </collectionView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="nph-WK-pEa"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="mAT-91-mYe" firstAttribute="bottom" secondItem="nph-WK-pEa" secondAttribute="bottom" id="0Sb-t1-YCA"/>
@@ -217,7 +220,6 @@
                             <constraint firstItem="nph-WK-pEa" firstAttribute="trailing" secondItem="SOf-sx-46o" secondAttribute="trailing" constant="20" id="sNA-XC-JBn"/>
                             <constraint firstItem="fJ4-Zw-1vv" firstAttribute="trailing" secondItem="nph-WK-pEa" secondAttribute="trailing" id="tae-JK-cb3"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="nph-WK-pEa"/>
                     </view>
                     <navigationItem key="navigationItem" id="Uuu-06-Yue"/>
                     <connections>
@@ -257,4 +259,9 @@
     <inferredMetricsTieBreakers>
         <segue reference="Yq7-P2-vLm"/>
     </inferredMetricsTieBreakers>
+    <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
