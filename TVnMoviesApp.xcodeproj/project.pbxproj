@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3BD69EEE2546F21600130F21 /* ApiKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD69EED2546F21600130F21 /* ApiKey.swift */; };
 		8C71BD7C24DDF9CE0014E416 /* SeasonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C71BD7B24DDF9CE0014E416 /* SeasonData.swift */; };
 		8C7E826B24DF149300812C9A /* EpisodeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7E826924DF149300812C9A /* EpisodeCollectionViewCell.swift */; };
 		8C7E826C24DF149300812C9A /* EpisodeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C7E826A24DF149300812C9A /* EpisodeCollectionViewCell.xib */; };
@@ -25,11 +26,14 @@
 		8CA7508024DD7316005B6CB8 /* EpisodeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA7507E24DD7316005B6CB8 /* EpisodeData.swift */; };
 		8CA7508324DDF098005B6CB8 /* SeasonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA7508124DDF098005B6CB8 /* SeasonCollectionViewCell.swift */; };
 		8CA7508424DDF098005B6CB8 /* SeasonCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CA7508224DDF098005B6CB8 /* SeasonCollectionViewCell.xib */; };
-		8CA8669324EA987D004FA8F6 /* ApiKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA8669224EA987D004FA8F6 /* ApiKey.swift */; };
 		8CD4727724E16D120092EF83 /* EpisodeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD4727624E16D120092EF83 /* EpisodeDetailViewController.swift */; };
+		BA92403A8FDB7DD30FEBBD22 /* Pods_TVnMoviesApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB5664D665B9B3AF93C319D7 /* Pods_TVnMoviesApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3BD69EED2546F21600130F21 /* ApiKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiKey.swift; sourceTree = "<group>"; };
+		423C956EF68AA934562D00AC /* Pods-TVnMoviesApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TVnMoviesApp.release.xcconfig"; path = "Target Support Files/Pods-TVnMoviesApp/Pods-TVnMoviesApp.release.xcconfig"; sourceTree = "<group>"; };
+		6E0151ED115E8ED8A73A2213 /* Pods-TVnMoviesApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TVnMoviesApp.debug.xcconfig"; path = "Target Support Files/Pods-TVnMoviesApp/Pods-TVnMoviesApp.debug.xcconfig"; sourceTree = "<group>"; };
 		8C71BD7B24DDF9CE0014E416 /* SeasonData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonData.swift; sourceTree = "<group>"; };
 		8C7E826924DF149300812C9A /* EpisodeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeCollectionViewCell.swift; sourceTree = "<group>"; };
 		8C7E826A24DF149300812C9A /* EpisodeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EpisodeCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -50,8 +54,8 @@
 		8CA7507E24DD7316005B6CB8 /* EpisodeData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpisodeData.swift; sourceTree = "<group>"; };
 		8CA7508124DDF098005B6CB8 /* SeasonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonCollectionViewCell.swift; sourceTree = "<group>"; };
 		8CA7508224DDF098005B6CB8 /* SeasonCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeasonCollectionViewCell.xib; sourceTree = "<group>"; };
-		8CA8669224EA987D004FA8F6 /* ApiKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiKey.swift; sourceTree = "<group>"; };
 		8CD4727624E16D120092EF83 /* EpisodeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeDetailViewController.swift; sourceTree = "<group>"; };
+		CB5664D665B9B3AF93C319D7 /* Pods_TVnMoviesApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TVnMoviesApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA92403A8FDB7DD30FEBBD22 /* Pods_TVnMoviesApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +103,8 @@
 			children = (
 				8CA7506824DD6EE4005B6CB8 /* TVnMoviesApp */,
 				8CA7506724DD6EE4005B6CB8 /* Products */,
+				90C2500F9833FBB5880D444F /* Pods */,
+				AF3EA621CF268AAA3E664458 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -118,7 +125,7 @@
 				8CA8668B24EA9777004FA8F6 /* Support Files */,
 				8CA7507224DD6EE6005B6CB8 /* Assets.xcassets */,
 				8CA7507724DD6EE6005B6CB8 /* Info.plist */,
-				8CA8669224EA987D004FA8F6 /* ApiKey.swift */,
+				3BD69EED2546F21600130F21 /* ApiKey.swift */,
 			);
 			path = TVnMoviesApp;
 			sourceTree = "<group>";
@@ -181,6 +188,24 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		90C2500F9833FBB5880D444F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6E0151ED115E8ED8A73A2213 /* Pods-TVnMoviesApp.debug.xcconfig */,
+				423C956EF68AA934562D00AC /* Pods-TVnMoviesApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		AF3EA621CF268AAA3E664458 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CB5664D665B9B3AF93C319D7 /* Pods_TVnMoviesApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -188,9 +213,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8CA7507A24DD6EE6005B6CB8 /* Build configuration list for PBXNativeTarget "TVnMoviesApp" */;
 			buildPhases = (
+				6E750F17E6EDC8D884FF1CCB /* [CP] Check Pods Manifest.lock */,
 				8CA7506224DD6EE4005B6CB8 /* Sources */,
 				8CA7506324DD6EE4005B6CB8 /* Frameworks */,
 				8CA7506424DD6EE4005B6CB8 /* Resources */,
+				49D4B52C5F942346D16CDAE5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -250,6 +277,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		49D4B52C5F942346D16CDAE5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TVnMoviesApp/Pods-TVnMoviesApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TVnMoviesApp/Pods-TVnMoviesApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TVnMoviesApp/Pods-TVnMoviesApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6E750F17E6EDC8D884FF1CCB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TVnMoviesApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8CA7506224DD6EE4005B6CB8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -259,11 +328,11 @@
 				8CD4727724E16D120092EF83 /* EpisodeDetailViewController.swift in Sources */,
 				8CA7506E24DD6EE4005B6CB8 /* SeasonViewController.swift in Sources */,
 				8CA7506A24DD6EE4005B6CB8 /* AppDelegate.swift in Sources */,
+				3BD69EEE2546F21600130F21 /* ApiKey.swift in Sources */,
 				8C7E826B24DF149300812C9A /* EpisodeCollectionViewCell.swift in Sources */,
 				8C98E57625103EAF004CAD6C /* HomeViewController.swift in Sources */,
 				8C98E57F25104318004CAD6C /* HomeCollectionViewCell.swift in Sources */,
 				8C71BD7C24DDF9CE0014E416 /* SeasonData.swift in Sources */,
-				8CA8669324EA987D004FA8F6 /* ApiKey.swift in Sources */,
 				8C98E57825103F21004CAD6C /* SearchData.swift in Sources */,
 				8CA7506C24DD6EE4005B6CB8 /* SceneDelegate.swift in Sources */,
 				8CA7507F24DD7316005B6CB8 /* Manager.swift in Sources */,
@@ -410,6 +479,7 @@
 		};
 		8CA7507B24DD6EE6005B6CB8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E0151ED115E8ED8A73A2213 /* Pods-TVnMoviesApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -428,6 +498,7 @@
 		};
 		8CA7507C24DD6EE6005B6CB8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 423C956EF68AA934562D00AC /* Pods-TVnMoviesApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
